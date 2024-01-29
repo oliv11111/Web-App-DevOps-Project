@@ -1,4 +1,4 @@
-# Milestone 2: DevOps Project - README
+# Milestone 3: DevOps Project - README
 
 ## Introduction
 
