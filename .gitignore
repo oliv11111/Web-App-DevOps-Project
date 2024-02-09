@@ -1,1 +1,11 @@
-aks-terraform/networking-module/.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.89.0/linux_amd64/terraform-provider-azurerm_v3.89.0_x5
+aks-terraform/networking-module/.terraform
+
+aks-terraform/cluster-module/.terraform
+
+/home/oliv11111/aicore/Web-App-DevOps-Project/aks-terraform/aks-cluster-module/.terraform.lock.hcl
+
+/home/oliv11111/aicore/Web-App-DevOps-Project/aks-terraform/networking-module/.terraform.lock.hcl
+
+/home/oliv11111/aicore/Web-App-DevOps-Project/aks-terraform/aks-cluster-module/.terraform
+
+/home/oliv11111/aicore/Web-App-DevOps-Project/aks-terraform/networking-module/.terraform
