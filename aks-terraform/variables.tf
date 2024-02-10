@@ -1,5 +1,3 @@
-# variables.tf
-
 variable "client_id" {
   description = "Access key for the provider"
   type        = string

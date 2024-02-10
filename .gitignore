@@ -1,6 +1,7 @@
 aks-terraform/networking-module/.terraform/
-
-aks-terraform/cluster-module/.terraform/
+aks-terraform/aks-cluster-module/.terraform/
+aks-terraform/.terraform/
+aks-terraform/secrets.tfvars
 
 /home/oliv11111/aicore/Web-App-DevOps-Project/aks-terraform/aks-cluster-module/.terraform.lock.hcl
 
