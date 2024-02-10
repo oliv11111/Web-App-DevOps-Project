@@ -51,6 +51,11 @@ variable "worker_node_subnet_id" {
   type        = string
   description = "ID of the worker node subnet"
 }
+variable "aks_nsg_id" {
+  type = string
+  description = "ID of the network security group"
+}
+
 
 
 
