@@ -9,11 +9,39 @@ import os
 # Initialise Flask App
 app = Flask(__name__)
 
+
+from azure.identity import ManagedIdentityCredential
+from azure.keyvault.secrets import SecretClient
+
+# Replace these values with your Key Vault details
+
+key_vault_name = 'OliverUnasingAKSVault'
+key_vault_url = f"https://{key_vault_name}.vault.azure.net"
+
+# Set up Azure Key Vault client with Managed Identity
+credential = ManagedIdentityCredential()
+secret_client = SecretClient(vault_url=key_vault_url, credential=credential)
+
+# Access the secret values from Key Vault
+secret_name1 = "database-name"
+secret1 = secret_client.get_secret(secret_name1)
+
+secret_name2 = "server-name"
+secret2 = secret_client.get_secret(secret_name2)
+
+secret_name3 = "server-password"
+secret3 = secret_client.get_secret(secret_name3)
+
+secret_name4 = "server-username"
+secret4 = secret_client.get_secret(secret_name4)
+
+
+# Your application code can now use the retrieved secrets securely
 # database connection 
-server = 'devops-project-server.database.windows.net'
-database = 'orders-db'
-username = 'maya'
-password = 'AiCore1237'
+server = secret2.value
+database = secret1.value
+username = secret4.value
+password = secret3.value
 driver= '{ODBC Driver 18 for SQL Server}'
 
 # Create the connection string
