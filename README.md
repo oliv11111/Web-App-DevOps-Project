@@ -112,6 +112,8 @@ docker rm <container-id>
 docker images -a
 docker rmi <image-id>
 ```
+![DOCKER](images/Docker.png)
+
 ## Infastructure as Code (IaC) - Terraform
 When using Azure kubernetes services you can define the infastructre manually, however this can cause problems and is prone to errors and inconcistencies. Terraform allows me to automate these tasks efficiently. By treating infrastructure as code, Terraform promotes consistency, repeatability, and predictability in resource management. 
 
@@ -386,6 +388,11 @@ you run "terraform init" in the future.
 
 ### Root Terraform Initalisation/Creating the aks-cluster
 Using the two modules create that have now been initalised the next step was to create and initalise the root terraform files, plan and apply. The root level terraform files tie together the provider set up and the module intergration. Meaning that the azure provider and any requirements are defined. And both the networking and aks-cluster modules are are configured with the correct input variables etc...
+
+File Structure: 
+
+![Terraform-files](images/terraform.png)
+
 #### Step 1: Create the main.tf 
 Here we define all the values and versions as mentioned above:
 ```hcl
@@ -512,7 +519,10 @@ terraform apply
 ```
 #### Step 6: Accesing the cluster/validation of correct infastructre
 Now we have applied the infastructre the aks-cluster has now been created and can be validated by checking in the azure portal
-INSERT IMAGE
+
+![Cluster](images/cluster.png)
+
+
 ## Deployment
 Deployments are used to define the desired state for your application, including the number of replicas (Pods) and the Docker image to use. we do this in a .yaml file
 
@@ -603,6 +613,9 @@ The next step was to build the appropriate pipelines for the build and deploymen
 #### Step 1: Create Project and Connect Repo
 This first step is quite self explanitory and requires signing into the Azure DevOps portal, creating a project and then following the onscreen instructuions to connect the project to the correct github repo.
 
+![REPO](images/Azure-DevOps.png)
+
+
 #### Step 2: Connect to docker hub
 Before building the pipeline it is a good practice to create the service to my docker hub. This again is done following the portal instructions and also generating a unique key from docker hub to validate your access.
 
@@ -661,6 +674,9 @@ steps:
 - kubernetesCluster: Specifies the name of the Kubernetes cluster where the manifests will be deployed. Here, it's set to "terraform-aks-cluster".
 
 - manifests: Specifies the path to the Kubernetes manifest file or files that define the resources to be deployed to the cluster. In this case, it's set to "application-manifest.yaml".
+
+![RUNS](images/DevOps-Pipelines.png)
+
 
 #### Step 5: Testing
 Again we can test this has worked by getting the pods and running the application locally by port forwarding
@@ -730,6 +746,9 @@ Within the vault, I then created 4 new secrets, for the variables I want to keep
 - database
 - username 
 - password 
+
+![VAULT](images/vault.png)
+
 #### Step 3: Set Cluster to managed identity
 To make my cluster a managed identity to be able to interact with the vault i ran the following command:
 ```bash
