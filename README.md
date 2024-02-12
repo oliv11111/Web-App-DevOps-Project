@@ -3,7 +3,7 @@
 The first task was to fork and clone the existing application files. In the context of this project this is the existing code from the development repository that throughout this project I will transform into a much more scablable and effiecent development eco-system as the needs of this companies website and its development pipeline has scaled. 
 I will be doing this by:
 - Implementing better verison control through GIT 
-- Conterisation using docker
+- Containerisation using docker
 - Infastructre as code (IaC) via terraform 
 - Deployment and scalabilty improvements through kubernetes 
 - CI/CD pipelines using Azure DevOps 
