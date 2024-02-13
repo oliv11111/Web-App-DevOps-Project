@@ -391,7 +391,7 @@ Using the two modules create that have now been initalised the next step was to 
 
 File Structure: 
 
-![Terraform-files](images/terraform.png)
+![Terraform-files](images/Terraform.png)
 
 #### Step 1: Create the main.tf 
 Here we define all the values and versions as mentioned above:
@@ -520,7 +520,7 @@ terraform apply
 #### Step 6: Accesing the cluster/validation of correct infastructre
 Now we have applied the infastructre the aks-cluster has now been created and can be validated by checking in the azure portal
 
-![Cluster](images/cluster.png)
+![Cluster](images/Cluster.png)
 
 
 ## Deployment
