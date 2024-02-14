@@ -55,7 +55,7 @@ git revert <commit hash>
 
 The **Delivery Date Column** feature aimed to provide additional information about the delivery process within the company's internal application. It introduced a new database column, `delivery_date`, to store and display delivery dates associated with orders.
 
-## Docker (Contaierization)
+## Docker (Containerization)
 Docker containerization significantly benefits the DevOps Project by providing portability, isolation, and reproducibility. Containers encapsulate the application and its dependencies, ensuring consistent performance across different environments. The lightweight nature of containers enhances resource efficiency and scalability, allowing for seamless deployment and easy horizontal scaling. Docker's versioning capability and centralized repository, Docker Hub, streamline collaboration and version control.
 
 ### How It Works - Docker Containerization Process
